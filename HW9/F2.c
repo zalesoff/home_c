@@ -1,0 +1,66 @@
+/*
+ * F2.c
+ * 
+ * Copyright 2025 webde <webde@DS-LAPTOP>
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301, USA.
+ * 
+
+
+ 
+ */
+
+void sort_even_odd(int n, int a[])
+{
+    int tmp[n];
+    int even_id = 0;
+    int odd_id = 0;
+    
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] % 2 == 0)
+        {
+            tmp[even_id++] = a[i];
+        }
+    }
+    
+    odd_id = even_id;
+    
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] % 2 != 0)
+        {
+            tmp[odd_id++] = a[i];
+        }
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        a[i] = tmp[i];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
